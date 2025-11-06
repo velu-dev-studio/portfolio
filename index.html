@@ -1,0 +1,676 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Template</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "neo-yellow": "#FBFF48",
+              "neo-pink": "#FF70A6",
+              "neo-blue": "#3B82F6",
+              "neo-green": "#33FF57",
+              "neo-purple": "#A855F7",
+              "neo-orange": "#FF9F1C",
+              "neo-red": "#FF2A2A",
+              "neo-white": "#FFFDF5",
+              "neo-black": "#121212",
+            },
+            fontFamily: {
+              display: ['"Space Grotesk"', "sans-serif"],
+              mono: ['"JetBrains Mono"', "monospace"],
+            },
+            boxShadow: {
+              hard: "4px 4px 0px 0px #000",
+              "hard-sm": "2px 2px 0px 0px #000",
+              "hard-lg": "8px 8px 0px 0px #000",
+              "hard-xl": "12px 12px 0px 0px #000",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-['Inter']">
+    <div class="fixed inset-0 pointer-events-none z-[-1] bg-[#e6dfff]">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1000 1000"
+        class="w-full h-full opacity-10"
+      >
+        <defs>
+          <radialGradient
+            id="blackholeGradient"
+            cx="50%"
+            cy="50%"
+            r="50%"
+            fx="50%"
+            fy="50%"
+          >
+            <stop
+              offset="0%"
+              style="stop-color: rgb(0, 0, 0); stop-opacity: 1"
+            />
+            <stop
+              offset="100%"
+              style="stop-color: rgb(0, 0, 0); stop-opacity: 0"
+            />
+          </radialGradient>
+        </defs>
+        <circle cx="500" cy="500" r="450" fill="url(#blackholeGradient)" />
+        <g stroke="black" fill="none" stroke-width="1">
+          <circle cx="500" cy="500" r="50" />
+          <circle cx="500" cy="500" r="100" />
+          <circle cx="500" cy="500" r="150" />
+          <circle cx="500" cy="500" r="200" />
+          <circle cx="500" cy="500" r="250" />
+          <circle cx="500" cy="500" r="300" />
+          <circle cx="500" cy="500" r="350" />
+          <circle cx="500" cy="500" r="400" />
+          <circle cx="500" cy="500" r="450" />
+        </g>
+        <g stroke="black" fill="none" stroke-width="1">
+          <path
+            d="M500 50 Q 700 250, 950 500 Q 700 750, 500 950 Q 300 750, 50 500 Q 300 250, 500 50"
+          />
+          <path
+            d="M500 100 Q 675 275, 900 500 Q 675 725, 500 900 Q 325 725, 100 500 Q 325 275, 500 100"
+          />
+          <path
+            d="M500 150 Q 650 300, 850 500 Q 650 700, 500 850 Q 350 700, 150 500 Q 350 300, 500 150"
+          />
+          <path
+            d="M500 200 Q 625 325, 800 500 Q 625 675, 500 800 Q 375 675, 200 500 Q 375 325, 500 200"
+          />
+          <path
+            d="M500 250 Q 600 350, 750 500 Q 600 650, 500 750 Q 400 650, 250 500 Q 400 350, 500 250"
+          />
+        </g>
+      </svg>
+    </div>
+
+    <div class="relative z-10 border-8 border-black">
+      <main class="container p-4 mx-auto">
+        <section class="relative overflow-hidden">
+          <div
+            class="absolute w-20 h-20 bg-blue-400 border-4 border-black rounded-full md:w-32 md:h-32 lg:w-40 lg:h-40 md:border-8 top-16 md:top-24 lg:top-32 right-5 md:right-8 lg:right-10 opacity-80"
+          ></div>
+          <div
+            class="absolute w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32 transform rotate-45 bg-[#9158ff] border-4 md:border-8 border-black bottom-10 md:bottom-16 lg:bottom-20 left-5 md:left-8 lg:left-10 opacity-80"
+          ></div>
+          <div
+            class="absolute w-12 h-12 transform bg-green-400 border-2 border-black md:w-20 md:h-20 lg:w-24 lg:h-24 md:border-4 top-1/2 left-1/4 -rotate-12 opacity-80"
+          ></div>
+          <div
+            class="absolute w-10 h-10 bg-purple-400 border-2 border-black rounded-full md:w-16 md:h-16 lg:w-20 lg:h-20 md:border-4 bottom-1/4 right-1/4 opacity-80"
+          ></div>
+          <div
+            class="absolute w-8 h-8 transform rotate-45 bg-pink-400 border-2 border-black md:w-12 md:h-12 lg:w-16 lg:h-16 md:border-4 top-1/3 right-1/3 opacity-80"
+          ></div>
+
+          <div class="relative z-10 py-5">
+            <nav
+              class="flex flex-col items-center justify-between mb-8 sm:flex-row sm:mb-12"
+            >
+              <div
+                class="text-2xl sm:text-3xl font-bold transform -rotate-3 bg-white px-3 py-1 sm:px-4 sm:py-2 border-2 sm:border-4 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] mb-4 sm:mb-0"
+              ></div>
+              <ul class="flex space-x-4 text-base sm:space-x-6 sm:text-lg">
+                <li>
+                  <a href="#about" class="font-bold hover:underline">ABOUT</a>
+                </li>
+                <li>
+                  <a href="#skills" class="font-bold hover:underline">SKILLS</a>
+                </li>
+                <!-- <li>
+                  <a href="#projects" class="font-bold hover:underline"
+                    >PROJECTS</a
+                  >
+                </li> -->
+                <li>
+                  <a href="#contact" class="font-bold hover:underline"
+                    >CONTACT</a
+                  >
+                </li>
+              </ul>
+            </nav>
+            <div
+              class="flex flex-col items-center justify-between gap-8 py-5 lg:flex-row lg:gap-16 lg:py-10"
+            >
+              <div class="w-full lg:w-1/2">
+                <h1
+                  class="text-4xl sm:text-5xl lg:text-6xl xl:text-8xl font-extrabold mb-6 sm:mb-8 leading-none py-5 sm:py-10"
+                >
+                  <span
+                    class="transform -rotate-2 bg-white inline-block px-2 sm:px-4 border-2 sm:border-4 border-black mb-2 sm:mb-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] sm:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
+                    >SOFTWARE</span
+                  >
+                  <span
+                    class="transform rotate-2 bg-blue-400 inline-block px-2 sm:px-4 border-2 sm:border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] sm:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
+                    >ENGINEER</span
+                  >
+                </h1>
+
+                <p
+                  class="text-lg sm:text-xl lg:text-2xl mb-8 sm:mb-12 max-w-2xl bg-white p-3 sm:p-4 border-2 sm:border-4 border-black transform rotate-1 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
+                >
+                  Hi, I'm Velmurugan. I build robust and scalable solutions
+                  using cutting-edge tech.
+                </p>
+
+                <a
+                  href="#projects"
+                  class="bg-black text-white px-6 sm:px-8 py-3 sm:py-4 text-lg sm:text-xl font-bold inline-block hover:bg-gray-800 transition-colors duration-300 transform hover:-translate-y-1 hover:shadow-[4px_4px_0px_0px_rgba(239,68,68,1)] sm:hover:shadow-[8px_8px_0px_0px_rgba(239,68,68,1)] border-2 sm:border-4 border-black"
+                >
+                  VIEW MY WORK
+                </a>
+              </div>
+              <div class="w-full max-w-2xl lg:w-1/2 lg:mt-0">
+                <div
+                  class="hidden md:block project-card bg-white border-2 sm:border-4 border-black rounded-tl-lg rounded-tr-lg shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] sm:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transform hover:-translate-y-2 transition-transform duration-300"
+                >
+                  <div
+                    class="flex items-center p-2 sm:p-3 bg-[#ff9aa2] border-b-2 sm:border-b-4 border-black browser-bar"
+                  >
+                    <div
+                      class="w-4 h-4 sm:w-6 sm:h-6 mr-2 bg-[#ff9aa2] rounded-full border-2 border-black"
+                    ></div>
+                    <div
+                      class="w-4 h-4 sm:w-6 sm:h-6 mr-2 bg-[#ff9aa2] rounded-full border-2 border-black"
+                    ></div>
+                    <div
+                      class="w-4 h-4 sm:w-6 sm:h-6 bg-[#ff9aa2] rounded-full border-2 border-black"
+                    ></div>
+                  </div>
+                  <div>
+                    <img
+                      class="object-cover w-full max-h-64 sm:max-h-96"
+                      src="assets/images/hero.jpg"
+                      alt="Project preview"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- About Me -->
+      <div
+        id="about"
+        class="p-3 md:p-8 my-20 container mx-auto bg-gradient-to-br from-purple-200 to-pink-200 border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]"
+      >
+        <h2 class="mb-6 text-5xl font-black text-black">About Me</h2>
+        <div
+          class="p-2 overflow-hidden bg-white border-4 border-black rounded-lg shadow-lg md:p-6"
+        >
+          <div
+            class="flex flex-col items-center gap-6 md:flex-row md:items-start"
+          >
+            <img
+              src="assets/images/about/profile.png"
+              alt="Velmurugan"
+              class="object-cover w-48 h-48 border-4 border-black rounded-full"
+            />
+            <div class="flex-1">
+              <p class="mb-4 text-xl">
+                I'm Senior Full-Stack Engineer with 8+ years of experience building scalable, cloud-native applications across modern frontend and backend stacks. I focus on delivering reliable, maintainable products that solve real business problems.
+              </p>
+              <p class="mb-4 text-xl">
+                I have strong hands-on experience with AWS, Azure, and DevOps practices, with a proven track record in CI/CD, API Gateway, microservices, serverless architecture, and performance optimization. I build secure systems using TDD, backed by comprehensive unit, integration, and end-to-end testing.
+              </p>
+              <p class="text-xl">
+                I bring hands-on experience building Gen-AI solutions with modern LLM orchestration frameworks, focusing on production-ready RAG pipelines and prompt engineering. I apply these capabilities to create intelligent user experiences and business workflows, while collaborating in Agile Scrum teams to deliver measurable impact across engineering and product.
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-col md:flex-row justify-center gap-6 reveal">
+            <a
+              href="assets/resume/Velmurugan_CV.pdf"
+              download
+              class="bg-neo-white text-black border-2 border-black px-10 py-5 text-xl font-bold shadow-hard hover:bg-neo-pink hover:text-black hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all cursor-hover flex items-center justify-center gap-2 m-5"
+            >
+              <i class="ri-download-line"></i> DOWNLOAD CV
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skills -->
+      <div id="skills" class="container mx-auto my-20">
+        <div
+          class="p-8 bg-gradient-to-br from-pink-300 to-yellow-200 border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]"
+        >
+          <h2 class="mb-6 text-5xl font-black text-black">Skills</h2>
+          <div id="skillsButtons" class="flex flex-wrap gap-2 mb-6"></div>
+
+          <div
+            class="overflow-hidden bg-white border-4 border-black rounded-lg shadow-lg"
+          >
+            <div
+              class="flex items-center justify-between p-3 bg-gray-100 border-b-4 border-black"
+            >
+              <div class="flex space-x-2">
+                <div
+                  class="w-4 h-4 bg-red-500 border-2 border-black rounded-full"
+                ></div>
+                <div
+                  class="w-4 h-4 bg-yellow-500 border-2 border-black rounded-full"
+                ></div>
+                <div
+                  class="w-4 h-4 bg-green-500 border-2 border-black rounded-full"
+                ></div>
+              </div>
+              <div
+                id="selectedSkillName"
+                class="px-3 py-1 font-mono text-sm bg-white border-2 border-black rounded-full"
+              ></div>
+              <div class="w-4"></div>
+            </div>
+            <div
+              id="selectedSkillItems"
+              class="p-6 font-mono text-lg bg-gradient-to-br from-blue-50 to-purple-50"
+            ></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Technologies -->
+      <!-- <div id="technologies" class="container mx-auto my-20">
+        <div class="p-8 bg-gradient-to-br from-blue-200 to-green-200 border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]">
+          <h2 class="mb-6 text-5xl font-black text-black">Technologies & Tools</h2>
+          <div id="technologiesGrid" class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5"></div>
+        </div>
+      </div> -->
+
+      <!-- Experience & Education -->
+      <div class="container mx-auto my-20">
+        <div
+          class="p-5 md:p-8 bg-gradient-to-br from-green-200 to-blue-200 border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]"
+        >
+          <h2 class="mb-6 text-5xl font-black text-black">
+            Experience & Education
+          </h2>
+          <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+            <div
+              class="overflow-hidden bg-white border-4 border-black rounded-lg shadow-lg"
+            >
+              <div
+                class="flex items-center justify-between p-3 bg-gray-100 border-b-4 border-black"
+              >
+                <div class="flex space-x-2">
+                  <div
+                    class="w-4 h-4 bg-red-500 border-2 border-black rounded-full"
+                  ></div>
+                  <div
+                    class="w-4 h-4 bg-yellow-500 border-2 border-black rounded-full"
+                  ></div>
+                  <div
+                    class="w-4 h-4 bg-green-500 border-2 border-black rounded-full"
+                  ></div>
+                </div>
+                <div
+                  class="px-3 py-1 font-mono text-sm bg-white border-2 border-black rounded-full"
+                >
+                  experience.pro
+                </div>
+                <div class="w-4"></div>
+              </div>
+              <div
+                id="experienceList"
+                class="font-mono text-lg p-6 bg-gradient-to-br from-yellow-50 to-green-50 h-[500px] overflow-y-auto"
+              ></div>
+            </div>
+
+            <div
+              class="overflow-hidden bg-white border-4 border-black rounded-lg shadow-lg"
+            >
+              <div
+                class="flex items-center justify-between p-3 bg-gray-100 border-b-4 border-black"
+              >
+                <div class="flex space-x-2">
+                  <div
+                    class="w-4 h-4 bg-red-500 border-2 border-black rounded-full"
+                  ></div>
+                  <div
+                    class="w-4 h-4 bg-yellow-500 border-2 border-black rounded-full"
+                  ></div>
+                  <div
+                    class="w-4 h-4 bg-green-500 border-2 border-black rounded-full"
+                  ></div>
+                </div>
+                <div
+                  class="px-3 py-1 font-mono text-sm bg-white border-2 border-black rounded-full"
+                >
+                  education.history
+                </div>
+                <div class="w-4"></div>
+              </div>
+              <div
+                id="educationList"
+                class="font-mono text-lg p-6 bg-gradient-to-br from-blue-50 to-purple-50 h-[500px] overflow-y-auto"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projects -->
+      <!-- <main class="container px-4 py-16 mx-auto my-20">
+        <section id="projects" class="projects">
+          <h2
+            class="text-4xl md:text-5xl font-extrabold mb-12 transform -rotate-1"
+          >
+            <span
+              class="bg-yellow-300 inline-block px-6 py-2 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
+              >MY PROJECTS</span
+            >
+          </h2>
+
+          <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+            <div
+              class="project-card bg-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transform hover:-translate-y-2 transition-transform duration-300"
+            >
+              <div
+                class="flex items-center p-2 bg-gray-200 border-b-4 border-black browser-bar"
+              >
+                <div class="w-3 h-3 mr-2 bg-red-500 rounded-full"></div>
+                <div class="w-3 h-3 mr-2 bg-yellow-500 rounded-full"></div>
+                <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+              </div>
+              <img
+                src="assets/images/projects/project-hero.jpg"
+                alt="Project 1"
+                class="w-full border-b-4 border-black"
+              />
+              <div class="p-4">
+                <h3 class="mb-2 text-2xl font-bold">Project Name</h3>
+                <p class="mb-4">
+                  A brief description of the project and the technologies used.
+                </p>
+                <a
+                  href="#"
+                  class="bg-blue-400 text-black px-4 py-2 font-bold inline-block hover:bg-blue-500 transition-colors duration-300 border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
+                >
+                  See More
+                </a>
+              </div>
+            </div>
+
+            <div
+              class="project-card bg-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transform hover:-translate-y-2 transition-transform duration-300"
+            >
+              <div
+                class="flex items-center p-2 bg-gray-200 border-b-4 border-black browser-bar"
+              >
+                <div class="w-3 h-3 mr-2 bg-red-500 rounded-full"></div>
+                <div class="w-3 h-3 mr-2 bg-yellow-500 rounded-full"></div>
+                <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+              </div>
+              <img
+                src="assets/images/projects/project-hero.jpg"
+                alt="Project 2"
+                class="w-full border-b-4 border-black"
+              />
+              <div class="p-4">
+                <h3 class="mb-2 text-2xl font-bold">Another Project</h3>
+                <p class="mb-4">
+                  Description of another amazing project in your portfolio.
+                </p>
+                <a
+                  href="#"
+                  class="bg-green-400 text-black px-4 py-2 font-bold inline-block hover:bg-green-500 transition-colors duration-300 border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
+                >
+                  See More
+                </a>
+              </div>
+            </div>
+
+            <div
+              class="project-card bg-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transform hover:-translate-y-2 transition-transform duration-300"
+            >
+              <div
+                class="flex items-center p-2 bg-gray-200 border-b-4 border-black browser-bar"
+              >
+                <div class="w-3 h-3 mr-2 bg-red-500 rounded-full"></div>
+                <div class="w-3 h-3 mr-2 bg-yellow-500 rounded-full"></div>
+                <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+              </div>
+              <img
+                src="assets/images/projects/project-hero.jpg"
+                alt="Project 3"
+                class="w-full border-b-4 border-black"
+              />
+              <div class="p-4">
+                <h3 class="mb-2 text-2xl font-bold">Cool Project</h3>
+                <p class="mb-4">
+                  Showcase your skills with this impressive project description.
+                </p>
+                <a
+                  href="#"
+                  class="bg-purple-400 text-black px-4 py-2 font-bold inline-block hover:bg-purple-500 transition-colors duration-300 border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
+                >
+                  See More
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main> -->
+
+      <section id="contact" class="py-24 px-4 max-w-5xl mx-auto">
+        <div
+          class="bg-white border-4 border-black shadow-hard-xl p-8 md:p-12 relative reveal mt-12"
+        >
+          <div
+            class="absolute -top-10 -left-6 bg-neo-yellow border-4 border-black px-6 py-2 shadow-hard rotate-[-5deg]"
+          >
+            <span class="font-black text-2xl">HIRE ME</span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div>
+              <h2 class="text-6xl font-black uppercase mb-6 leading-[0.85]">
+                Let's<br />Talk<br />
+              </h2>
+              <p class="font-mono text-lg mb-8 text-gray-600">
+                I am currently open to full-time opportunities and exciting new
+                challenges.
+              </p>
+              <div class="space-y-4">
+                <div class="flex items-center gap-4">
+                  <div
+                    class="w-12 h-12 bg-neo-black text-white flex items-center justify-center border-2 border-black"
+                  >
+                    <i class="ri-mail-line text-xl"></i>
+                  </div>
+                  <a
+                    href="mailto:vct.velu@gmail.com"
+                    class="text-xl font-bold hover:bg-neo-blue cursor-hover"
+                    >vct.velu@gmail.com</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <form
+              id="contact-form"
+              class="space-y-6 bg-gray-50 p-6 border-2 border-black"
+            >
+              <div class="flex flex-col">
+                <label class="font-mono font-bold mb-1 uppercase text-xs"
+                  >Identity</label
+                >
+                <input
+                  id="name"
+                  name="name"
+                  required
+                  type="text"
+                  placeholder="NAME / COMPANY"
+                  class="bg-white border-2 border-black p-3 font-bold focus:outline-none focus:bg-neo-yellow focus:shadow-hard-sm transition-all cursor-hover"
+                />
+              </div>
+
+              <div class="flex flex-col">
+                <label class="font-mono font-bold mb-1 uppercase text-xs"
+                  >Coordinates</label
+                >
+                <input
+                  id="email"
+                  name="email"
+                  required
+                  type="email"
+                  placeholder="EMAIL ADDRESS"
+                  class="bg-white border-2 border-black p-3 font-bold focus:outline-none focus:bg-neo-yellow focus:shadow-hard-sm transition-all cursor-hover"
+                />
+              </div>
+
+              <div class="flex flex-col">
+                <label class="font-mono font-bold mb-1 uppercase text-xs"
+                  >Transmission</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  rows="4"
+                  placeholder="ROLE/PROJECT DETAILS..."
+                  class="bg-white border-2 border-black p-3 font-bold focus:outline-none focus:bg-neo-yellow focus:shadow-hard-sm transition-all resize-none cursor-hover"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full bg-neo-blue text-white font-black text-xl py-4 border-2 border-black shadow-hard hover:bg-neo-black hover:translate-y-1 hover:shadow-none transition-all"
+              >
+                TRANSMIT DATA
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <footer class="py-8 text-white bg-black border-t-4 border-white">
+        <div class="container px-4 mx-auto">
+          <div class="flex flex-col items-center justify-between md:flex-row">
+            <div class="mb-4 md:mb-0">
+              <h2 class="text-2xl font-bold">Velmurugan</h2>
+              <p class="text-sm">Software Engineer</p>
+            </div>
+            <div class="flex flex-col items-center md:flex-row">
+              <a
+                href="mailto:vct.velu@gmail.com"
+                class="mb-2 md:mb-0 md:mr-4 hover:underline"
+              >
+                vct.velu@gmail.com
+              </a>
+              <div class="flex space-x-4">
+                <a
+                  href="https://github.com/velu-dev-studio"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="transition-colors hover:text-gray-400"
+                >
+                  <svg
+                    class="w-6 h-6"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="https://linkedin.com/in/lavelu"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="transition-colors hover:text-gray-400"
+                >
+                  <svg
+                    class="w-6 h-6"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </a>
+                <!-- <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer" class="transition-colors hover:text-gray-400">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"
+                    />
+                  </svg>
+                </a> -->
+              </div>
+            </div>
+          </div>
+          <div class="mt-8 text-sm text-center">
+            <p>
+              &copy; <span id="currentYear"></span> Made by the
+              <a href="https://github.com/velu-dev-studio/" target="_blank"
+                >velu-dev-studio</a
+              >. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script>
+      // init EmailJS
+      emailjs.init("Wkgz_SwfzzSHbyVN8");
+      const form = document.getElementById("contact-form");
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const params = {
+          name: form.querySelector('[name="name"]').value.trim(),
+          email: form.querySelector('[name="email"]').value.trim(),
+          message: form.querySelector('[name="message"]').value.trim(),
+          page_url: window.location.href,
+          submitted_at: new Date().toISOString(),
+        };
+
+        try {
+          form.innerHTML = `<div class=\'py-20 text-center\'><i class=\'ri-checkbox-circle-fill text-6xl text-neo-green mb-4 block\'></i><h3 class=\'text-2xl font-black uppercase\'>Sending...</h3><p class=\'font-mono text-sm mt-2\'>Please wait</p></div>`;
+          await emailjs.send("service_gsbbpzx", "template_kkzzl68", params);
+          form.innerHTML = `<div class=\'py-20 text-center\'><i class=\'ri-checkbox-circle-fill text-6xl text-neo-green mb-4 block\'></i><h3 class=\'text-2xl font-black uppercase\'>Transmission Received</h3><p class=\'font-mono text-sm mt-2\'>I will reach out shortly.</p></div>`;
+          form.reset();
+        } catch (err) {
+          form.innerHTML = `<div class=\'py-20 text-center\'><i class=\'ri-checkbox-circle-fill text-6xl text-neo-green mb-4 block\'></i><h3 class=\'text-2xl font-black uppercase\'>FAILED TO SEND</h3><p class=\'font-mono text-sm mt-2\'>Try Again</p></div>`;
+          console.error(err);
+        }
+      });
+    </script>
+  </body>
+</html>
