@@ -2,36 +2,36 @@ window.PORTFOLIO_DATA = {
   skills: [
     {
       name: 'Programming Languages',
-      items: ['JavaScript', 'TypeScript', 'Python', 'Bash Scripting']
+      items: ['JavaScript', 'TypeScript', 'Python', 'C#']
     },
     {
       name: 'Frontend',
       items: ['HTML, CSS, SCSS', 'TailwindCSS', 'MaterialUI', 'React', 'Next.js', 'Angular']
     },
-    {
-      name: 'State Management',
-      items: ['Redux', 'Zustand', 'RxJS']
-    },
+    // {
+    //   name: 'Client State Management',
+    //   items: ['Redux', 'Zustand', 'RxJS']
+    // },
     {
       name: 'Backend',
-      items: ['Node.js', 'Express.js', 'Nest.js', 'FastAPI', 'Serverless Functions', 'API Gateway or API Management']
+      items: ['Express.js', 'Nest.js', 'FastAPI', 'ASP.NET (WEB API, MVC)']
     },
     {
       name: 'DB & QL',
-      items: ['MySQL, PostgreSQL', 'MongoDB, DynamoDB, Redis', 'Pinecone, Chroma, Faiss', 'SQL', 'GraphQL']
+      items: ['MySQL, PostgreSQL, SQL Server', 'MongoDB, DynamoDB, Redis', 'Pinecone, Chroma, Faiss', 'SQL', 'GraphQL']
     },
     {
       name: 'DevOps & CI/CD',
       items: ['AWS, Azure', 'Docker, Kubernetes', 'GitHub Action', 'ArgoCD', 'AWS CDK']
     },
     {
-      name: 'Generative AI',
-      items: ['RAG', 'Prompt Eng, Context Eng', 'LangGraph', 'CrewAI', 'MCP']
+      name: 'AI Agents',
+      items: ['RAG', 'Prompt Eng, Context Eng', 'LangChain, LangGraph', 'LangSmith, Langfuse', 'MCP']
     },
-    {
-      name: 'Monitoring & Testing',
-      items: ['Jest', 'Pytest', 'Sentry.io', 'New Relic']
-    },
+    // {
+    //   name: 'Monitoring & Testing',
+    //   items: ['Jest', 'Pytest', 'Sentry.io', 'New Relic']
+    // },
     {
       name: 'Soft Skills',
       items: ['Communication', 'Team Collaboration', 'Leadership', 'Problem-Solving', 'Mentoring']
@@ -61,10 +61,10 @@ window.PORTFOLIO_DATA = {
       company: 'Redblox Technologies, IN',
       period: 'Mar 2024 - Jan 2025',
       responsibilities: [
-        'Led architecture and end-to-end development of full-stack applications using React, Nest.js, FastAPI, AWS, Azure, CI/CD, Docker, and Kubernetes.',
-        'Spearheaded scalable Agentic AI workflows using LangGraph, CrewAI, and MCP, decoupling data retrieval from core logic to improve modularity.',
-        'Mentored a team of 5 developers, reduced junior engineer ramp-up time by 30%, and strengthened code ownership and peer review culture.',
-        'Collaborated with stakeholders to gather requirements, align priorities, and drive key design decisions for scalable multi-project architectures.'
+        'Led architecture and end-to-end development of full-stack applications using modern frameworks (React, ASP.NET, FastAPI), cloud platforms (AWS, Azure) and DevOps practices (CI/CD, Docker, Kubernetes).',
+        'Engineered end-to-end agentic AI solutions, designing and implementing LLMOps with retrieval, evaluation, and CI/CD workflows to deliver scalable, reliable, and responsible AI systems from concept to deployment.',
+        'Mentored a team of 5 developers, reduced junior engineer ramp-up time by 30% and established a strong culture of code ownership and peer review.',
+        'Collaborated with stakeholders to gather requirements, align priorities, and influence key system design decisions, resulting in improved application performance and a scalable, future-proof architecture across multiple projects.'
       ]
     },
     {
@@ -72,11 +72,12 @@ window.PORTFOLIO_DATA = {
       company: 'Redblox Technologies, IN',
       period: 'Mar 2023 - Feb 2024',
       responsibilities: [
-        'Developed and deployed full-stack applications using React, Node.js, FastAPI, and PostgreSQL, integrating AWS Lambda and API Gateway for microservices architecture.',
-        'Built AI-driven solutions with LangChain and LangGraph, including RAG pipelines and MCP-based agent workflows for data-intensive systems.',
-        'Implemented CI/CD pipelines with GitHub Actions and Docker, reducing deployment time by 30% and increasing release frequency.',
+        'Developed and deployed full-stack applications with scalable microservices architecture, and implemented robust testing and CI/CD workflows to ensure high-quality releases.',
+        'Built AI-driven features using agentic workflows and retrieval-augmented pipelines to enhance data-intensive systems.',
+        'Engineered automation workflows to streamline processes and integrate systems using low-code orchestration platforms (n8n, Flowise).',
+        'Engineered end-to-end CI/CD pipelines and serverless cloud applications using GitHub Actions, Docker, Kubernetes, AWS CDK, and Argo CD, reducing deployment time by 30% and increasing release frequency.',
         'Optimized database queries and backend services, lowering infrastructure costs by 40% and improving API response times.',
-        'Collaborated with product stakeholders on technical requirements to ensure scope clarity and timely feature delivery.'
+        'Analyzed technical requirements in collaboration with product stakeholders, ensuring scope clarity and timely delivery of features.'
       ]
     },
     {
@@ -84,11 +85,11 @@ window.PORTFOLIO_DATA = {
       company: 'Auroran Technologies, USA',
       period: 'Jan 2021 - Feb 2023',
       responsibilities: [
-        'Developed and deployed Microsoft 365 solutions using SPFx, automating workflows and improving document management efficiency across departments.',
-        'Integrated Microsoft Graph API for automated email, calendar, and document access.',
-        'Developed secure backend APIs with Node.js and Express, reducing downtime and improving reliability.',
-        'Implemented Azure AD-based authentication and role-based access, reducing IT support requests by 20%.',
-        'Worked with stakeholders to define requirements and accelerate feature delivery.'
+        'Developed and deployed full-stack web applications using modern technologies including React, Material UI and ASP.NET, improving system reliability and user experience.',
+        'Engineered cloud-native applications, leveraging containerization and cloud services to ensure scalability, reliability, and maintainability.',
+        'Built secure backend APIs, implemented authentication, role-based access, and error handling, reducing downtime and support requests.',
+        'Optimized database queries and backend services, and developed reusable, maintainable components to improveperformance, scalability, and API response times.',
+        'Integrated third-party APIs to extend system functionality.'
       ]
     },
     {
@@ -96,8 +97,8 @@ window.PORTFOLIO_DATA = {
       company: 'Abi-Tech Solution, IN',
       period: 'Apr 2020 - Aug 2020',
       responsibilities: [
-        'Built responsive web apps using Node.js and Express with modern JavaScript best practices and backend service integration.',
-        'Designed and deployed RESTful APIs with AWS Lambda and API Gateway for secure and scalable microservice integration.',
+        'Built responsive web apps using Node.js and Express, incorporating modern JavaScript best practices andbackend service integration.',
+        'Engineered RESTful APIs with AWS Lambda and API Gateway, enabling secure and scalable integration.',
         'Worked with PostgreSQL, MySQL, and MongoDB, optimizing queries to improve response times by 30%.',
         'Ensured backend security and reliability through clean, tested services.'
       ]
